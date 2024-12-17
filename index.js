@@ -45,6 +45,9 @@ function getRandomGenre() {
 function fuseGenres() {
     const genre1 = getRandomGenre()
     const genre2 = getRandomGenre()
+    while (genre1 === genre2) {
+        genre2 = getRandomGenre()
+    }
     return `${genre1} + ${genre2} 게임`
 }
 
